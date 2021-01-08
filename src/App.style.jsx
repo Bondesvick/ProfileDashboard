@@ -6,8 +6,8 @@ export const MainBody = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 96vh;
-  padding: 1rem
+  height: 100vh;
+  padding: 0.8rem 1rem
 `
 
 export const Left = styled.div`
@@ -28,6 +28,5 @@ export const Right = styled.div`
     border: 1px solid #707070;
     border-radius: 28px;
     opacity: 1; 
-
 `
 
