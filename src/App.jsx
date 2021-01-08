@@ -3,6 +3,8 @@ import {MainBody, Left, Right, RightHeader, RightFooter} from './App.style.jsx'
 import SearchBox from './components/SearchBox.jsx'
 import CategoryBtn from './components/CategoryBtn'
 import { FaUsers, FaMale, FaFemale } from "react-icons/fa";
+import CountryDropDown from './components/CountryDropDown.jsx';
+import RadioBtn from './components/RadioBtn.jsx';
 
 function App() {
   return (
@@ -30,14 +32,16 @@ function App() {
         <Right>
           <RightHeader>
             <h1 style={{color: "#262A41", fontStyle: "Poppins", opacity: "1", marginBottom: "-5px"}}>All Users</h1>
+            
             <p style={{fontStyle: "Poppins", letterSpacing: "-0.02px", color: "#262A41", opacity: "0.9",  marginBottom: "10px"}}>Filter by</p>
 
             <div className="filter-area">
 
-              <SearchBox icoTop="0.8rem" icoLeft="0.7rem" icoSize="1rem" font="10px" leftPad="2rem" width="40%" height="40px" background="#E2E2EA" color="" radius="35px" placeholder="Find in list"/>
+              <SearchBox icoTop="0.8rem" icoLeft="0.7rem" icoSize="1rem" font="12px" leftPad="2rem" width="40%" height="40px" background="#E2E2EA" color="#262A41" radius="35px" placeholder="Find in list"/>
 
-              <div>hello</div>
-              <div>hello</div>
+              <CountryDropDown/>
+              
+              <RadioBtn color="#30BBB5"/>
             </div>
            
           </RightHeader>
