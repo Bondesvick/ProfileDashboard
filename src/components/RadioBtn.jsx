@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaToggleOn, FaToggleOff} from "react-icons/fa";
+import {FaToggleOn} from "react-icons/fa";
 import styled from 'styled-components'
 
 const Container =styled.div`

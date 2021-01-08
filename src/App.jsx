@@ -5,8 +5,11 @@ import CategoryBtn from './components/CategoryBtn'
 import { FaUsers, FaMale, FaFemale } from "react-icons/fa";
 import CountryDropDown from './components/CountryDropDown.jsx';
 import RadioBtn from './components/RadioBtn.jsx';
+import {Route, withRouter, Switch, Redirect} from "react-router-dom"
+import UsersList from './views/UsersList.jsx';
+import UserDetail from './views/UserDetail.jsx';
 
-function App() {
+function App({match}) {
   return (
       <MainBody>
         <Left>
@@ -32,7 +35,7 @@ function App() {
         <Right>
           <RightHeader>
             <h1 style={{color: "#262A41", fontStyle: "Poppins", opacity: "1", marginBottom: "-5px"}}>All Users</h1>
-            
+
             <p style={{fontStyle: "Poppins", letterSpacing: "-0.02px", color: "#262A41", opacity: "0.9",  marginBottom: "10px"}}>Filter by</p>
 
             <div className="filter-area">
@@ -47,7 +50,18 @@ function App() {
           </RightHeader>
 
           <div style={{height: "80%"}}>
-            
+          <Switch>
+              <Route path="/" exact>
+                <Redirect to="/userlist" exact />{" "}
+                </Route>
+
+                <Route path="/userlist" exact>
+                    <UsersList/>
+                </Route>
+
+                <Route path="/userlist/:id" component={UserDetail}/>
+
+            </Switch>
           </div>
           
 
@@ -59,4 +73,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
