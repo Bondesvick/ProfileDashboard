@@ -32,6 +32,33 @@ export const Right = styled.div`
 
     border: 1px solid #707070;
     border-radius: 28px;
-    opacity: 1; 
+    opacity: 1;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const RightHeader = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: baseline; */
+    width: 80%;
+    height: 20%;
+    /* margin: 2rem 2rem 2rem 2rem; */
+    margin-top: 1rem;
+
+    .filter-area{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+    }
+
+`
+export const RightFooter = styled.div`
+height: 10%;
 `
 

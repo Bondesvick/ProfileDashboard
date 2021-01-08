@@ -5,30 +5,31 @@ import { HiOutlineSearch } from "react-icons/hi";
 const Main = styled.div`
     position: relative;
     border: none;
+    width: ${({width}) => (width)};
 
     .srch-compass{
         position: absolute;
         z-index: +10;
-        left: 1rem;
-        top: 1.5rem;
-        height: 2rem;
-        width: 2rem;
+        left: ${({icoLeft}) => (icoLeft)};
+        top: ${({icoTop}) => (icoTop)};
+        height: ${({icoSize}) => (icoSize)};
+        width: ${({icoSize}) => (icoSize)};
     }
 `
 
 const Input = styled.input`
-    background-color: #3C3F54;
+    background-color: ${({background}) => (background)};
     border: none;
-    border-radius: 28px;
-    height: 75px;
-    width: 500px;
-    color: #fff;
-    padding: 1rem 1rem 1rem 4rem;
+    border-radius: ${({radius}) => (radius)};
+    height: ${({height}) => (height)};
+    width: 100%;
+    padding: 1rem;
+    padding-left: ${({leftPad}) => (leftPad)};
     /* font-size: 3em; */
-    font: Poppins;
-    font-size: 22px;
+    font-style: Poppins;
+    font-size: ${({font}) => (font)};
     letter-spacing: -0.02px;
-    color: #FFFFFF;
+    color: ${({color}) => (color)};
     opacity: 0.7;
 
     &:focus{
@@ -36,11 +37,13 @@ const Input = styled.input`
     }
 `
 
-export default function SearchBox() {
+export default function SearchBox({icoTop, icoLeft, icoSize, font, leftPad, width, height, background, color, radius, placeholder}) {
     return (
-        <Main>
+        <Main icoTop={icoTop} icoLeft={icoLeft} icoSize={icoSize} width={width}>
             <HiOutlineSearch className="srch-compass"/>
-            <Input type="search" placeholder="Find a user"/>
+
+            <Input leftPad={leftPad} font={font} width={width} height={height} background={background} color={color} radius={radius} type="search" placeholder={placeholder}/>
+
         </Main>
     )
 }
