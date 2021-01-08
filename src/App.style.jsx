@@ -18,6 +18,11 @@ export const Left = styled.div`
     align-items: center;
     justify-content: center;
     color: #fff;
+
+    .button-area{
+      display: flex;
+      align-items: center;
+    }
 `
 
 export const Right = styled.div`

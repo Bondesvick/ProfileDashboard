@@ -20,7 +20,7 @@ const Input = styled.input`
     background-color: #3C3F54;
     border: none;
     border-radius: 28px;
-    height: 80px;
+    height: 75px;
     width: 500px;
     color: #fff;
     padding: 1rem 1rem 1rem 4rem;
