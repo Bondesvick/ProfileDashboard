@@ -7,8 +7,8 @@ const Select = styled.select`
     height: 40px;
     border-radius: 35px;
     width: 25%;
-    padding: 0.5rem;
-    padding-right: 2rem;
+    padding: 0.5rem 1rem;
+    /* padding-right: 2rem; */
     font-size: 12px;
     opacity: 0.73;
 

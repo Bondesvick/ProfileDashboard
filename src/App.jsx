@@ -33,6 +33,7 @@ function App({match}) {
         </Left>
           
         <Right>
+        
           <RightHeader>
             <h1 style={{color: "#262A41", fontStyle: "Poppins", opacity: "1", marginBottom: "-5px"}}>All Users</h1>
 
